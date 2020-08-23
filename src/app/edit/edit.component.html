@@ -1,0 +1,24 @@
+<div class="box-edit">
+  <div class="input-group">
+    <label class="sr-only" for="fileName">File Name </label>
+    <input *ngIf="snippet" class="form-control" type="text" id="fileName"
+           [(ngModel)]="snippet.fileName" placeholder="File Name">
+    <div class="input-group-append">
+      <button class="btn btn-outline-{{snippet?.visible ? 'primary': 'secondary'}}" type="button"
+              (click)="toggleVisibility()">{{snippet?.visible ? 'Public': 'Secret'}}</button>
+    </div>
+  </div>
+  <div>
+    <label class="sr-only" for="content">Body</label>
+    <br>
+    <textarea *ngIf="snippet" class="form-control body-input" id="content" name="content-input"
+                    [(ngModel)]="snippet.content"></textarea>
+  </div>
+  <br>
+  <div class="btn-group">
+    <button class="btn btn-primary" (click)="onSave()">Save</button>
+    <button class="btn btn-primary" (click)="onPreview()">Preview</button>
+    <button class="btn btn-primary" (click)="onLink()">Copy Link</button>
+    <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+  </div>
+</div>

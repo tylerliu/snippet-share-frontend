@@ -1,0 +1,13 @@
+<div class="box-list">
+  <br>
+  <button type="button" class="btn btn-outline-primary" (click)="onNew()">
+    New Snippet
+  </button>
+  <br>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let snippet of snippets" (click)="onSelect(snippet)">
+      <span class="badge badge-pill badge-secondary">{{getFromNow(snippet?.modified)}}</span>
+      {{snippet?.fileName}}
+    </li>
+  </ul>
+</div>

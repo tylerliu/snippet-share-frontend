@@ -1,0 +1,16 @@
+<div class="box-preview card">
+  <div class="card-header text-center">
+    <div class="row">
+      <span style="width: 10px"></span>
+      <h3 *ngIf="fileName" class="no-margin">{{fileName}}</h3>
+      <span style="flex-grow: 1"></span>
+      <button (click)="onEdit()" class="btn btn-info">Edit</button>
+      <span style="width: 10px"></span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div *ngIf="renderedBody" [innerHTML]="renderedBody"></div>
+  </div>
+</div>
+

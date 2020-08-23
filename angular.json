@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css",
+              "node_modules/highlight.js/styles/github.css"
             ],
             "scripts": []
           },
@@ -62,11 +64,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "snippet-share-frontend:build"
+            "browserTarget": "snippet-share-frontend:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "snippet-share-frontend:build:production"
+              "browserTarget": "snippet-share-frontend:build:production",
             }
           }
         },
@@ -88,7 +91,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css",
+              "node_modules/highlight.js/styles/github.css"
             ],
             "scripts": []
           }
